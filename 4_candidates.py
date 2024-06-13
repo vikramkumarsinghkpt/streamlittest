@@ -35,15 +35,12 @@ import pandas as pd
 
 
 
-file_uploader = st.file_uploader(":file_folder: upload a file", type=(["csv", "txt", "xlsx", "xls"]))
-     
-
-     data = get_dataframe(file_uploader)
-
-
 
 # data = pd.read_csv("output.csv")
 def main():
+
+     file_uploader = st.file_uploader(":file_folder: upload a file", type=(["csv", "txt", "xlsx", "xls"]))
+     data = get_dataframe(file_uploader)
 
     def display_candidate_profiles():
         st.title("Candidate Profiles")
